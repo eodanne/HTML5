@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sistema de Cadastro de Acervo Bibliográfico</title>
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1>CADASTRO DE REFERÊNCIA BIBLIOGRÁFICA</h1>
+            <p>Cadastre os livros recomendados para as disciplinas</p>
+        </header>
+        <section>
+            
+            <h2>Cadastro de Livro</h2>
+
+            <form action="/salvar-livro" method="POST">
+
+                <fieldset>
+                    <legend>Informações da Obra</legend>
+
+                    <label for="titulo">Título do livro:</label>
+                    <input type="text" id="titulo"
+                           name="titulo" required>
+                    <br><br>
+
+                    <label for="autores">Autor(es):</label>
+                    <input type="text" id="autores"
+                           name="autores" required>
+                    <br><br>
+
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" id="isbn"
+                           name="isbn" maxlength="13"
+                           placeholder="Digite até 13 dígitos"
+                           required>
+                    <br><br>
+
+                    <label for="ano">Ano de publicação:</label>
+                    <input type="number" id="ano"
+                           name="ano" required>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Detalhes Acadêmicos</legend>
+
+                    <label for="curso">Curso alvo:</label>
+                    <select id="curso" name="curso" required>
+                        <option value="">Selecione um curso</option>
+                        <option value="Engenharia de Software">
+                            Engenharia de Software
+                        </option>
+                        <option value="Análise e Desenvolvimento de Sistemas">
+                            Análise e Desenvolvimento de Sistemas
+                        </option>
+                        <option value="Tronco Comum">
+                            Tronco Comum
+                        </option>
+                    </select>
+                    <br><br>
+
+                    <label for="disciplina">Disciplina:</label>
+                    <input type="text" id="disciplina"
+                           name="disciplina" required>
+                    <br><br>
+
+                    <p>Formato:</p>
+
+                    <input type="radio" id="fisico"
+                           name="formato" value="Fisico" required>
+                    <label for="fisico">Físico</label>
+
+                    <input type="radio" id="digital"
+                           name="formato" value="Digital">
+                    <label for="digital">Digital</label>
+
+                    <input type="radio" id="hibrido"
+                           name="formato" value="Hibrido">
+                    <label for="hibrido">Híbrido</label>
+
+                </fieldset>
+
+                <br>
+
+                <button type="submit">Salvar livro</button>
+
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
+
